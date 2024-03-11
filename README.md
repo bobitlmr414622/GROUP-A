@@ -24,3 +24,11 @@ class Vote(models.Model):
 
     def __str__(self):
         return f"{self.student} voted for {self.candidate}"
+        # voting/admin.py
+from django.contrib import admin
+from .models import Student, Candidate, Vote
+
+admin.site.register(Student)
+admin.site.register(Candidate)
+admin.site.register(Vote)
+
